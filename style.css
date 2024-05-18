@@ -19,6 +19,12 @@ body {
     --grey: hsl(0, 0%, 50%);
     --black: hsl(0, 0%, 7%);
 
+    --major-space: 24px;
+    --minor-space: 12px;
+
+    --major-radius: 20px;
+    --minor-radius: 10px;
+
     font-family: 'Figtree', sans-serif;
     font-size: 1rem;
 
@@ -37,33 +43,46 @@ main {
 .card {
     background-color: var(--black);
     max-width: 384px;
+    border-radius: var(--major-radius);
+
 
     position: relative;
-    transform: translate(10px, 10px);
-    
+    transform: translate(8px, 8px);
 }
 
 .content {  
     background-color: var(--white);
+    border-radius: var(--major-radius);
+    border: 1px solid var(--black);
+    padding: var(--major-space);
 
     position: relative;
-    transform: translate(-10px, -10px);   
+    transform: translate(-8px, -8px); 
 
     display: flex;
     flex-direction: column;
+    gap: var(--major-space);
 }
-
 
 .content > img {
     align-self: center;
+    border-radius: var(--minor-radius);
 }
 
 .content > .text {
-
+    display: flex;
+    flex-direction: column;
+    gap: var(--minor-space);
 }
 
 .content > .author {
+    display: flex;
+    align-items: center;
+    gap: var(--minor-space);
+}
 
+.content > .author > img {
+    max-width: 32px;
 }
 
 
