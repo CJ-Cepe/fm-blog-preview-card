@@ -21,10 +21,57 @@ body {
 
     font-family: 'Figtree', sans-serif;
     font-size: 1rem;
+
+    background-color: var(--yellow);
+    height: 100vh;
+}
+
+main {
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: var(--black);
+    max-width: 384px;
+
+    position: relative;
+    transform: translate(10px, 10px);
+    
+}
+
+.content {  
+    background-color: var(--white);
+
+    position: relative;
+    transform: translate(-10px, -10px);   
+
+    display: flex;
+    flex-direction: column;
 }
 
 
+.content > img {
+    align-self: center;
+}
+
+.content > .text {
+
+}
+
+.content > .author {
+
+}
 
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
