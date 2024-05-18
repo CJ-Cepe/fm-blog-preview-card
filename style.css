@@ -68,7 +68,7 @@ main {
 .content {  
     background-color: var(--white);
     border-radius: var(--major-radius);
-    border: 1.5px solid var(--black);
+    border: 1px solid var(--black);
     padding: var(--major-space);
 
     position: relative;
@@ -81,7 +81,8 @@ main {
     align-items: flex-start;
 }
 
-.content:hover {
+.content:hover,
+.content:focus {
     transform: translate(-16px, -16px);
 }
 
@@ -115,7 +116,8 @@ main {
     transition: color 0.1s ease-in-out;
 }
 
-.text > h1:hover {
+.text > h1:hover,
+.text > h1:focus {
     color: var(--yellow);
 }
 
