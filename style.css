@@ -11,6 +11,7 @@
 * {
     margin: 0;
     padding: 0;
+    line-height: 150%;
 }
 
 body {
@@ -64,17 +65,43 @@ main {
     gap: var(--major-space);
 }
 
+/* ILLUSTRATION */
 .content > img {
     align-self: center;
     border-radius: var(--minor-radius);
 }
 
+/* TEXT */
 .content > .text {
     display: flex;
     flex-direction: column;
     gap: var(--minor-space);
 }
 
+.text > .tag {
+    align-self: flex-start;
+
+    background-color: var(--yellow);
+    border-radius: 4px;
+    padding: 4px 12px;
+}
+
+.text > .date {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.text > h1 {
+    font-size: 24px;
+}
+
+.text > p:last-child {
+    font-size: 16px;
+    color: var(--grey);
+}
+
+
+/* AUTHOR */
 .content > .author {
     display: flex;
     align-items: center;
@@ -85,7 +112,11 @@ main {
     max-width: 32px;
 }
 
+.content > .author > .name {
 
+}
+
+/* ATTRIBUTION */
 .attribution { 
     font-size: 11px; 
     text-align: center; 
@@ -93,4 +124,13 @@ main {
 
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+
+.bold {
+    font-weight: 500;
+}
+
+.bolder {
+    font-weight: 800;
 }
