@@ -14,6 +14,16 @@
     line-height: 150%;
 }
 
+
+.bold {
+    font-weight: 500;
+}
+
+.bolder {
+    font-weight: 800;
+}
+
+
 body {
     --yellow: hsl(47, 88%, 63%);
     --white: hsl(0, 0%, 100%);
@@ -30,7 +40,11 @@ body {
     font-size: 1rem;
 
     background-color: var(--yellow);
+
+    display: flex;
+    flex-direction: column;
     height: 100vh;
+    padding: 1rem;
 }
 
 main {
@@ -39,13 +53,13 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: auto;
 }
 
 .card {
     background-color: var(--black);
     max-width: 384px;
     border-radius: var(--major-radius);
-
 
     position: relative;
     transform: translate(8px, 8px);
@@ -54,21 +68,28 @@ main {
 .content {  
     background-color: var(--white);
     border-radius: var(--major-radius);
-    border: 1px solid var(--black);
+    border: 1.5px solid var(--black);
     padding: var(--major-space);
 
     position: relative;
     transform: translate(-8px, -8px); 
+    transition: transform 0.1s ease-out;
 
     display: flex;
     flex-direction: column;
     gap: var(--major-space);
+    align-items: flex-start;
+}
+
+.content:hover {
+    transform: translate(-16px, -16px);
 }
 
 /* ILLUSTRATION */
 .content > img {
     align-self: center;
     border-radius: var(--minor-radius);
+    max-height: 200px;
 }
 
 /* TEXT */
@@ -76,30 +97,35 @@ main {
     display: flex;
     flex-direction: column;
     gap: var(--minor-space);
+
+    align-items: flex-start;
 }
 
 .text > .tag {
-    align-self: flex-start;
-
     background-color: var(--yellow);
     border-radius: 4px;
     padding: 4px 12px;
+    font-size: 14px;
 }
 
 .text > .date {
     font-size: 14px;
-    font-weight: 400;
 }
 
 .text > h1 {
     font-size: 24px;
+    cursor: pointer;
+    transition: color 0.1s ease-in-out;
+}
+
+.text > h1:hover {
+    color: var(--yellow);
 }
 
 .text > p:last-child {
     font-size: 16px;
     color: var(--grey);
 }
-
 
 /* AUTHOR */
 .content > .author {
@@ -110,10 +136,11 @@ main {
 
 .content > .author > img {
     max-width: 32px;
+    aspect-ratio: 1 / 1;
 }
 
 .content > .author > .name {
-
+    font-size: 14px;
 }
 
 /* ATTRIBUTION */
@@ -126,11 +153,3 @@ main {
     color: hsl(228, 45%, 44%); 
 }
 
-
-.bold {
-    font-weight: 500;
-}
-
-.bolder {
-    font-weight: 800;
-}
